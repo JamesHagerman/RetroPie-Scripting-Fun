@@ -27,25 +27,28 @@ Add something like this to `es_systems.cfg`
     <extension>.sh .py</extension>
     <command>%ROM%</command>
     <platform/>
-    <theme/>
+    <theme>system</theme>
   </system>
 ```
 
-Then, after a reboot (or restarting EmulationStation itself) any `.sh` or `.py` scripts in the `/home/pi/RetroPie/scripts` directory will be listed as "games" under the `Scripts` emulator entry in the GUI!
+Then, after a reboot (or restarting EmulationStation itself) any `.sh` or `.py` scripts in the 
+`/home/pi/RetroPie/scripts` directory will be listed as "games" under the `Scripts` emulator entry in the GUI!
 
 
 ## Installing the scripts
 
 Start with following the directions further down on getting the GUI menu setup first...
 
-Then, move the scripts all (or some) of the scripts in this repo into the right place for Emulation station to pick em up:
+Then, move the scripts all (or some) of the scripts in this repo into the right place for Emulation station to pick em 
+up:
 
 ```
 mkdir ~/RetroPie/scripts
 cp ./scripts/* ~/RetroPie/scripts/
 ```
 
-Then reboot RetroPie (Note: EmulationStation ONLY starts correctly ON THE DEVICE! Don't run `kill emulationstation`. Just reboot the thing.)
+Then reboot RetroPie (Note: EmulationStation ONLY starts correctly ON THE DEVICE! Don't run `kill emulationstation`. 
+Just reboot the thing.)
 
 
 ## Writing your own scripts:
@@ -57,7 +60,8 @@ sudo apt-get install python-pip
 pip install pysdl2
 ```
 
-And it's worth knowing that scripts MUST have the correct hash-bang at the beginning of the file in order to work correctly:
+And it's worth knowing that scripts MUST have the correct hash-bang at the beginning of the file in order to work 
+correctly:
 
 ```
 #!/usr/bin/python
@@ -75,7 +79,8 @@ The first thing you'll want your script to do is be able to exit cleanly! Either
 
 ### SDL Example
 
-Here is a `main.py` that draws an sdl window (I put it in `/home/pi/RetroPie/scripts/main.py`). Use `chmod +x main.py` to make sure you can run it...
+Here is a `main.py` that draws an sdl window (I put it in `/home/pi/RetroPie/scripts/main.py`). Use `chmod +x main.py` 
+to make sure you can run it...
 
 ```python
 #!/usr/bin/python
