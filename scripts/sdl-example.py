@@ -16,7 +16,7 @@ def main():
 
     win = SDL_CreateWindow(b"Hello World!", X, Y, W, H, FLAGS)
     ren = SDL_CreateRenderer(win, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC)
-    bmp = SDL_LoadBMP(b"./link.bmp")
+    bmp = SDL_LoadBMP(b"/home/pi/RetroPie/scripts/link.bmp")
     tex = SDL_CreateTextureFromSurface(ren, bmp)
     SDL_FreeSurface(bmp)
 
