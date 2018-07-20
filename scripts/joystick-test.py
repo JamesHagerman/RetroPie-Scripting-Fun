@@ -160,4 +160,8 @@ while True:
                 axis_states[axis] = fvalue
                 print "%s: %.3f" % (axis, fvalue)
 
+        # Select button exits...
+        if button_states[0x125]
+            exit()
+
 
